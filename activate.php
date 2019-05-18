@@ -37,9 +37,7 @@ EOD;
 $address =  $_SESSION['Address'];
 
 //Check if invoice paid
-$invoiceId   = $_SESSION['InvoiceID'];
-$OrderId   = $_SESSION['OrderID'];
-$OrderPaid = $wallet->GetInvoiceStatus ($invoiceId,$OrderId);
+$OrderPaid = $wallet->GetInvoiceStatus ($_SESSION['InvoiceID'],$_SESSION['OrderID']);
 if ( $OrderPaid == 'FAIL' ) {
 	die ('Payment not successful - please try again');
 }
@@ -85,7 +83,7 @@ if ( $OrderPaid == 'FAIL' ) {
 						</header>
 							<section class="wrapper style5">
 								<div class="inner">
-								<h3>ORDER #<?php print $OrderID;?></h3>
+								<h3>ORDER #<?php print $_SESSION['OrderID'];?></h3>
 								<p>Thank you for your payment - before you get started, open your local wallet and ensure it's fully synced.</p><br>
 								<p>Here is your unique cold staking address please enter in your local wallet when prompted: <pre><code><?php print $address; ?></code></pre></p>
 								</div>
