@@ -80,7 +80,7 @@ $OrderID = $ticker . '-' . $address . '-' . $random;
 							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>TRUSTAKE.CO.UK</h2>
 							<p>The trusted home of <br />
 							cold staking<br />
-							<a href="#main" class="more scrolly"><b>PAYMENT</b></a>
+							<a href="landing.php" class="more scrolly"><b>PAYMENT</b></a>
 					</section>
 
 				<!-- Footer -->
