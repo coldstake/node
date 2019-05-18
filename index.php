@@ -32,18 +32,11 @@ $message = <<<EOD
 EOD;
 }
 }
-
-// Grab the next unused address 
-$address = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'getnewstakeaddress') ;
-//TODO: error trap the address
-
-$random= $wallet-> crypto_rand(100000000000,999999999999);
-$OrderID = $ticker . '-' . $address . '-' . $random;
 ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>trustaking.com</title>
+		<title>COLDSTAKE.CO.IN</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -58,7 +51,7 @@ $OrderID = $ticker . '-' . $address . '-' . $random;
 			<!-- Header -->
 					<header id="header" class="alt">
 					<?php print $message;?>
-						<h1><a href="index.html">TRUSTAKE.CO.UK</a></h1>
+						<h1><a href="index.php">COLDSTAKE.CO.IN</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -77,7 +70,7 @@ $OrderID = $ticker . '-' . $address . '-' . $random;
 				<!-- Banner -->
 				<section id="banner">
 						<div class="inner">
-							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>TRUSTAKE.CO.UK</h2>
+							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>COLDSTAKE.CO.IN</h2>
 							<p>The trusted home of <br />
 							cold staking<br />
 							<a href="landing.php" class="more scrolly"><b>PAYMENT</b></a>
@@ -86,11 +79,11 @@ $OrderID = $ticker . '-' . $address . '-' . $random;
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
-							<li><a href="https://discord.gg/BRcDVqM" class="fab fa-discord"></a></li>
-							<li><a href="mailto:admin@trustake.co.uk" class="icon fa-envelope-o"></a></li>
+							<li><a href="https://discord.gg/YAZC9Gj" class="fab fa-discord"></a></li>
+							<li><a href="mailto:admin@coldstake.co.in" class="icon fa-envelope-o"></a></li>
 						</ul>
 						<ul class="copyright">
-						<li>&copy; TRUSTAKE.CO.UK</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; COLDSTAKE.CO.IN</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 

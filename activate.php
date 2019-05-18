@@ -45,8 +45,7 @@ if ( $OrderPaid == 'FAIL' ) {
 ?>
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>trustaking.com</title>
+		<title>COLDSTAKE.CO.IN</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -61,7 +60,7 @@ if ( $OrderPaid == 'FAIL' ) {
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">TRUSTAKE.CO.UK</a></h1>
+					<h1><a href="index.php">COLDSTAKE.CO.IN</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -91,13 +90,13 @@ if ( $OrderPaid == 'FAIL' ) {
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
+				<footer id="footer">
 						<ul class="icons">
-							<li><a href="https://discord.gg/BRcDVqM" class="fab fa-discord"></a></li>
-							<li><a href="mailto:admin@trustaking.com" class="icon fa-envelope-o"></a></li>
+							<li><a href="https://discord.gg/YAZC9Gj" class="fab fa-discord"></a></li>
+							<li><a href="mailto:admin@coldstake.co.in" class="icon fa-envelope-o"></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; TRUSTAKE.CO.UK</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; COLDSTAKE.CO.IN</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
