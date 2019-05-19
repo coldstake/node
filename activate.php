@@ -4,6 +4,12 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
+if ( $_SESSION['Address'] == '' || empty($_SESSION['Address']) || 
+	 $_SESSION['OrderID'] == '' || empty($_SESSION['OrderID']) || 
+	 $_SESSION['InvoiceID'] == '' || empty($_SESSION['InvoiceID']) ) {
+	die (' The session has expired - please try again.');
+}
+
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
 
