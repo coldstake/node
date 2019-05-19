@@ -49,6 +49,7 @@ EOD;
             grecaptcha.ready(function () {
                 grecaptcha.execute($captcha_site_key, { action: 'payment' }).then(function (token) {
                     var recaptchaResponse = document.getElementById('recaptchaResponse');
+					console.log(recaptchaResponse)
                     recaptchaResponse.value = token;
                 });
             });
@@ -86,7 +87,7 @@ EOD;
 							<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 				    			<ul class="actions">				
-                			    	<li><input type="submit" value="$15 for 1 year cold staking - Make Payment" /></li>
+                			    	<input type="submit" value="($15) Make Payment" />
                					</ul>
 					        </form>
 						</section>

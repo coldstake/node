@@ -14,18 +14,23 @@
     
         // Make and decode POST request:
         $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $captcha_secret_key . '&response=' . $recaptcha_response);
-        $recaptcha = json_decode($recaptcha,true);
-    
-        // Take action based on the score returned:
+        $recaptcha = json_decode($recaptcha);
 
-//        if ($recaptcha->score >= 0.5) {
-        if ($recaptcha['score'] >= 0.5) {
-                $verified=true;
-        } else {
-            $verified=false;
-            die ('Verification failed it looks like you are a bot, please retry!');
+        if($recaptcha->success==true){
+
+            // Take action based on the score returned:
+            if ($recaptcha->score >= 0.5) {
+                    $verified=true;
+            } else {
+                    $verified=false;
+                    die ('Verification failed it looks like you are a bot, please retry!');
+            }
+        } else{ // there is an error /
+            echo '<pre>';
+            print_r($recaptcha);
+            echo '</pre>';
+            exit;
         }
-    }
 
     //Check if node is online before further checks
     $check_server = $wallet->ping($scheme, $server_ip, $server_port);
