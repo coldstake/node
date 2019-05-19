@@ -86,7 +86,7 @@ EOD;
 							<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 				    			<ul class="actions">				
-                			    	<li><input type="submit" value="Payment" /></li>
+                			    	<li><input type="submit" value="$15 for 1 year cold staking - Make Payment" /></li>
                					</ul>
 					        </form>
 						</section>

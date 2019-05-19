@@ -17,6 +17,10 @@
         $recaptcha = json_decode($recaptcha);
     
         // Take action based on the score returned:
+        echo $captcha_secret_key;
+        echo $recaptcha_response;
+        echo $recaptcha->score;
+
         if ($recaptcha->score >= 0.5) {
             $verified=true;
         } else {
