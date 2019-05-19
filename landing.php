@@ -14,15 +14,13 @@
     
         // Make and decode POST request:
         $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $captcha_secret_key . '&response=' . $recaptcha_response);
-        $recaptcha = json_decode($recaptcha);
+        $recaptcha = json_decode($recaptcha,true);
     
         // Take action based on the score returned:
-        echo $captcha_secret_key;
-        echo $recaptcha_response;
-        echo $recaptcha->score;
 
-        if ($recaptcha->score >= 0.5) {
-            $verified=true;
+//        if ($recaptcha->score >= 0.5) {
+        if ($recaptcha['score'] >= 0.5) {
+                $verified=true;
         } else {
             $verified=false;
             die ('Verification failed it looks like you are a bot, please retry!');
