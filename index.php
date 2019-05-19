@@ -47,7 +47,7 @@ EOD;
 		<script src='https://www.google.com/recaptcha/api.js?render=<?php echo $captcha_site_key; ?>'></script>
         <script>
             grecaptcha.ready(function () {
-                grecaptcha.execute($captcha_site_key, { action: 'payment' }).then(function (token) {
+                grecaptcha.execute('<?php echo $captcha_site_key; ?>', { action: 'payment' }).then(function (token) {
                     var recaptchaResponse = document.getElementById('recaptchaResponse');
 					console.log(recaptchaResponse)
                     recaptchaResponse.value = token;
@@ -87,7 +87,7 @@ EOD;
 							<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 				    			<ul class="actions">				
-                			    	<input type="submit" value="($15) Make Payment" />
+                			    	<input type="submit" value="$15 - Pay Now" />
                					</ul>
 					        </form>
 						</section>
