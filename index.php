@@ -87,7 +87,7 @@ EOD;
 							<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 				    			<ul class="actions">				
-                			    	<input type="submit" value="$15 - Pay Now" />
+                			    	<input type="submit" value="$15 - Pay Now !" />
                					</ul>
 					        </form>
 						</section>
