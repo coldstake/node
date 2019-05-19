@@ -90,7 +90,7 @@ EOD;
                 			    	<input type="submit" value="$15 - Pay Now !" />
                					</ul>
 							</form>
-		<				/div>
+						</div>
 				</section>
 				<!-- One -->
 				<section id="one" class="wrapper style1 special">
