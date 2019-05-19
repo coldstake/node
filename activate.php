@@ -14,7 +14,7 @@ if ( $_SESSION['Address'] == '' || empty($_SESSION['Address']) ||
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
 
 if ( $check_server == '' || empty($check_server) ) {
-	die (' The coind server located at '. $scheme.'://'.$server_port.' on Port:['.$server_port.'] appears to be unresponsive.');
+	die (' The server appears to be unresponsive.');
 }
 
 if ( $check_server == '' || empty($check_server) ) {
@@ -25,7 +25,7 @@ EOD;
 
 $get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'getstakinginfo') ;
 	if ( !is_array($get_stakinginfo) ) {
-		die (' There was an error with your login parameters. Is your RPC Username and Password correct?');
+		die (' There was an error with your login parameters. Are your credentials correct?');
 	}
 
 if ($get_stakinginfo['enabled']>0) {

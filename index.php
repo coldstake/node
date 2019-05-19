@@ -1,4 +1,5 @@
 <?php 
+require ('/var/secure/keys.php');
 require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
@@ -43,6 +44,15 @@ EOD;
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://www.google.com/recaptcha/api.js?render=<?php echo $captcha_site_key; ?>'></script>
+        <script>
+            grecaptcha.ready(function () {
+                grecaptcha.execute($captcha_site_key, { action: 'payment' }).then(function (token) {
+                    var recaptchaResponse = document.getElementById('recaptchaResponse');
+                    recaptchaResponse.value = token;
+                });
+            });
+        </script>
 	</head>
 	<body class="landing is-preload">
 
@@ -60,7 +70,6 @@ EOD;
 										<ul>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">About</a></li>
-											<li><a href="landing.php">Order</a></li>
 										</ul>
 									</div>
 								</li>
@@ -74,8 +83,13 @@ EOD;
 							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>COLDSTAKE.CO.IN</h2>
 							<p>The trusted home of <br />
 							cold staking<br />
-							<a href="landing.php" class="more scrolly"><b>PAYMENT</b></a>
-					</section>
+							<form method="post" action="landing.php">
+            					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+				    			<ul class="actions">				
+                			    	<li><input type="submit" value="Payment" /></li>
+               					</ul>
+					        </form>
+						</section>
 				<!-- One -->
 				<section id="one" class="wrapper style1 special">
 						<div class="inner">
