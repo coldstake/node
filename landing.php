@@ -25,12 +25,13 @@
                     $verified=false;
                     die ('Verification failed it looks like you are a bot, please retry!');
             }
-        } else{ // there is an error /
+        } else { // there is an error /
             echo '<pre>';
             print_r($recaptcha);
             echo '</pre>';
             exit;
         }
+    }
 
     //Check if node is online before further checks
     $check_server = $wallet->ping($scheme, $server_ip, $server_port);
@@ -62,3 +63,5 @@
     // Forwarding to payment page
     header('Location:' . $invoiceURL); //<<redirect to payment page
     //echo '<br><b>Invoice:</b><br>'.$invoiceId.'" created, see '.$invoiceURL .'<br>';
+
+?>
