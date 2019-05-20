@@ -4,6 +4,19 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
+// Get current price
+
+$now = time();
+$datediff = $service_end_date - $now;
+$days_remaining = round($datediff / (60 * 60 * 24));
+$service_price = ($price / $online_days) * $days_remaining;
+
+echo $price;
+echo $online_days;
+echo $datediff;
+echo $days_remaining;
+echo $service_price;
+
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
 

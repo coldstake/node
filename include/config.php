@@ -5,8 +5,10 @@ $server_port='';
 $rpc_user='';
 $rpc_pass='';
 // Service specific variables will get injected
+$service_end_date='';
 $service_desc='';
 $price='';
+$online_days='';
 $redirectURL='';
 $email='';
 
