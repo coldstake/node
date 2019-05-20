@@ -99,10 +99,11 @@ EOD;
 
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-shopping-cart" value="<?php print $_SESSION['Price'];?> - Pay Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> - Pay Now" />
 					</form>
-
-					</section>
+					<a href="#main" class="more scrolly"><b>LEARN MORE</b></a>
+		
+				</section>
 				<!-- One -->
 				<section id="one" class="wrapper style1 special">
 						<div class="inner">
