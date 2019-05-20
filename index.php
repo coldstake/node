@@ -15,7 +15,7 @@ $service_price = round(($price / $online_days) * $days_remaining);
 
 echo $price . '--';
 echo $online_days . '--';
-echo $$difference . '--';
+echo $difference . '--';
 echo $days_remaining . '--';
 echo $service_price;
 
