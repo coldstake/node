@@ -11,7 +11,7 @@ $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
 $days_remaining = $difference->d;
-$service_price = roundup(($price / $online_days) * $days_remaining);
+$service_price = ceil(($price / $online_days) * $days_remaining);
 
 print_r ($difference);
 echo '<br>' . $price . '--';
