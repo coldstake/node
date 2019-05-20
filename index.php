@@ -34,13 +34,13 @@ $get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_p
 		die (' There was an error with your login parameters. Is your RPC Username and Password correct?');
 	}
 
-if ($get_stakinginfo['enabled']>0) {
+if ($get_stakinginfo['staking']>0) {
 $message = <<<EOD
-<label class="icon fa-circle" style='color:green'></label>Staking online
+<li class="icon fa-circle" style='color:green'>Staking online</li>
 EOD;
 } else {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='color:red'> Staking offline</label></ul>
+<ul class="icons"><label class="icon fa-circle" style='color:red'>Staking offline</label></ul>
 EOD;
 }
 }
@@ -79,7 +79,7 @@ EOD;
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><?php print $message;?></li>
+											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">About</a></li>
 										</ul>
