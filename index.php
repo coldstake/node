@@ -6,23 +6,14 @@ require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
 // Set  price
-
 $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
 $days_remaining = $difference->format("%a");
-$service_price = ceil(($price / $online_days) * $days_remaining);
-
-print_r ($now);
-echo '<br>';
-print_r ($end_date);
-echo '<br>';
-print_r ($difference);
-echo '<br>' . $price;
-echo '<br>' . $online_days;
-echo '<br>' . $days_remaining;
-
-$_SESSION['Price']=$service_price;
+$_SESSION['Price'] = ceil(($price / $online_days) * $days_remaining);
+if ($_SESSION['Price']>$price) {
+	$_SESSION['Price']=$price;
+}
 
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
