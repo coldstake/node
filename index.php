@@ -100,7 +100,7 @@ EOD;
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> Pay Now" />
 						</form>
-						<h6></h6><i><?php print $_SESSION['Days_Online'];?> days of cold staking remaining. Server ends on <?php print $end_date->format('Y-m-d');?></i>
+						<h6></h6><i><?php print $_SESSION['Days_Online'];?> days of cold staking remaining. Service ends on <?php print $end_date->format('Y-m-d');?></i>
 						<a href="#main" class="more scrolly"></a>
 				</section>
 		<!-- Main -->
