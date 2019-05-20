@@ -89,7 +89,7 @@ EOD;
 						</nav>
 					</header>
 
-				<!-- Banner -->
+		<!-- Banner -->
 				<section id="banner">
 						<div class="inner">
 							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>COLDSTAKE.CO.IN</h2>
@@ -101,8 +101,10 @@ EOD;
 					</form>
 					<a href="#main" class="more scrolly"><b>LEARN MORE</b></a>
 				</section>
+		<!-- Main -->
+				<article id="main">
 				<!-- One -->
-				<section id="one" class="wrapper style1 special">
+					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
 								<h2>Full Node as a Service</h2>
