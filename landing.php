@@ -48,9 +48,12 @@
     // Generate & store the InvoiceID in session
     $OrderID = $ticker . '-' . $address;
     $_SESSION['OrderID']=$OrderID;
+    
+    // Full service description
+    $serv=$_SESSION['Days_Online'].$service_desc;
 
     // Create invoice
-    $inv = $wallet->CreateInvoice($OrderID,$_SESSION['Price'],$_SESSION['Days_Online'].$service_desc);
+    $inv = $wallet->CreateInvoice($OrderID,$_SESSION['Price'],$serv);
     $invoiceId= $inv['invoice_id'];
     $invoiceURL= $inv['invoice_url'];
 
