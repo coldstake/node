@@ -102,7 +102,7 @@ EOD;
 								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> Pay Now" />
 						</form>
 						<h5></h5><i><?php print $_SESSION['Days_Online'];?> days of cold staking available. Server shutsdown on <?php print $end_date->format('Y-m-d');?></i>
-						<a href="#main" class="more scrolly"><b>LEARN MORE</b></a>
+						<a href="#main" class="more scrolly"><h5></h5><b>LEARN MORE</b></a>
 				</section>
 		<!-- Main -->
 				<article id="main">
