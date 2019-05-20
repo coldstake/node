@@ -25,7 +25,7 @@ if ( $check_server == '' || empty($check_server) ) {
 
 if ( $check_server == '' || empty($check_server) ) {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='font-size:16px;color:red'>Node is offline</label></ul>
+<ul class="icons"><label class="icon fa-circle" style='font-size:16px;color:red'>Node offline</label></ul>
 EOD;
 } else {
 
@@ -36,7 +36,7 @@ $get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_p
 
 if ($get_stakinginfo['enabled']>0) {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='color:green'> Staking online</label></ul>
+<label class="icon fa-circle" style='color:green'></label>Staking online
 EOD;
 } else {
 $message = <<<EOD
