@@ -98,7 +98,7 @@ EOD;
 						</div>
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'].' for'. $_SESSION['Days_Online'] . ' days<br>';?>  Pay Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'].' for '. $_SESSION['Days_Online'] . ' days<br />';?> Pay Now" />
 					</form>
 					<a href="#main" class="more scrolly"><b>LEARN MORE</b></a>
 				</section>
