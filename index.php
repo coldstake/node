@@ -5,11 +5,12 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
-// Set  price
+// Set  price and work out how long the server will run for
 $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
-$days_remaining = $difference->format("%a");
+$days_remaining = ceiling($difference->format("%a"));
+$_SESSION['Days_Online']=$days_remaining;
 $_SESSION['Price'] = ceil(($price / $online_days) * $days_remaining);
 if ($_SESSION['Price']>$price) {
 	$_SESSION['Price']=$price;
@@ -97,7 +98,7 @@ EOD;
 						</div>
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> - Pay Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'].' for'. $_SESSION['Days_Online'] . ' days<br>';?>  Pay Now" />
 					</form>
 					<a href="#main" class="more scrolly"><b>LEARN MORE</b></a>
 				</section>

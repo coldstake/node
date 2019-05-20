@@ -13,9 +13,6 @@ $online_days='';
 $redirectURL='';
 $email='';
 
-// BTCPayServer variables
-$encryt_pass='YourTopSecretPassword';
-
 // standard variables
 $server_ip='localhost'; // '0.0.0.0' target server ip. [ex.] 10.0.0.15
 $scheme='http' ;// tcp protocol to access json on coin. [default]
