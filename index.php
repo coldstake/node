@@ -9,7 +9,7 @@ $wallet = new phpFunctions_Wallet();
 $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
-$days_remaining = ceiling($difference->format("%a"));
+$days_remaining = ceil($difference->format("%a"));
 $_SESSION['Days_Online']=$days_remaining;
 $_SESSION['Price'] = ceil(($price / $online_days) * $days_remaining);
 if ($_SESSION['Price']>$price) {
