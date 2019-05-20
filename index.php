@@ -10,15 +10,13 @@ $wallet = new phpFunctions_Wallet();
 $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
-$days_remaining = $difference->d;
+$days_difference = $difference->format("%a");
 $service_price = ceil(($price / $online_days) * $days_remaining);
 
 print_r ($now);
 echo '<br>';
 print_r ($end_date);
-echo '<br>';
-print_r ($difference);
-echo '<br>';
+echo '<br>' . $days_difference;
 echo '<br>' . $price;
 echo '<br>' . $online_days;
 echo '<br>' . $days_remaining;
