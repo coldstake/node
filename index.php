@@ -6,7 +6,8 @@ $wallet = new phpFunctions_Wallet();
 
 // Get current price
 
-$now = time();
+//$now = time();
+$now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
 $days_remaining = $difference->d;
