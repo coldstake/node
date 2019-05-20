@@ -11,7 +11,7 @@ $datediff = $service_end_date - $now;
 $days_remaining = round($datediff / (60 * 60 * 24));
 $service_price = ($price / $online_days) * $days_remaining;
 
-echo $price;
+echo $price . '/n';
 echo $online_days;
 echo $datediff;
 echo $days_remaining;
