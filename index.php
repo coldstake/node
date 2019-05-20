@@ -85,13 +85,13 @@ EOD;
 							<p>The trusted home of <br />
 							cold staking<br /></p>
 						</div>
-					</section>
 
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-bitcoin" value="$15 - Pay Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="$15 - Pay Now" />
 					</form>
 
+					</section>
 				<!-- One -->
 				<section id="one" class="wrapper style1 special">
 						<div class="inner">
