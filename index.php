@@ -10,13 +10,14 @@ $wallet = new phpFunctions_Wallet();
 $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
-$days_difference = $difference->format("%a");
+$days_remaining = $difference->format("%a");
 $service_price = ceil(($price / $online_days) * $days_remaining);
 
 print_r ($now);
 echo '<br>';
 print_r ($end_date);
-echo '<br>' . $days_difference;
+echo '<br>';
+print_r ($difference);
 echo '<br>' . $price;
 echo '<br>' . $online_days;
 echo '<br>' . $days_remaining;
@@ -107,7 +108,7 @@ EOD;
 
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-shopping-cart" value="$$_SESSION['Price'] - Pay Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="<?php print $_SESSION['Price'];?> - Pay Now" />
 					</form>
 
 					</section>
