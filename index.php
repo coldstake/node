@@ -13,9 +13,9 @@ $difference = $now->diff($end_date);
 $days_remaining = $difference->d;
 $service_price = round(($price / $online_days) * $days_remaining);
 
+print_r ($difference);
 echo $price . '--';
 echo $online_days . '--';
-echo $difference . '--';
 echo $days_remaining . '--';
 echo $service_price;
 
