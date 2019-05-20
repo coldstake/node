@@ -79,9 +79,9 @@ EOD;
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">About</a></li>
+											<?php print $message;?>
 										</ul>
 									</div>
 								</li>
