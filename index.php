@@ -25,7 +25,7 @@ if ( $check_server == '' || empty($check_server) ) {
 
 if ( $check_server == '' || empty($check_server) ) {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='font-size:16px;color:red'>Node offline</label></ul>
+<li><a href=""class="icon fa-circle" style='color:red'>Node offline</a></li>
 EOD;
 } else {
 
@@ -36,11 +36,11 @@ $get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_p
 
 if ($get_stakinginfo['staking']>0) {
 $message = <<<EOD
-<li><a href="#"class="icon fa-circle" style='color:green'>Staking online</a></li>
+<li><a href=""class="icon fa-circle" style='color:green'>Staking online</a></li>
 EOD;
 } else {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='color:red'>Staking offline</label></ul>
+<li><a href=""class="icon fa-circle" style='color:red'>Staking offline</a></li>
 EOD;
 }
 }
@@ -79,9 +79,9 @@ EOD;
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
+											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">About</a></li>
-											<?php print $message;?>
 										</ul>
 									</div>
 								</li>
