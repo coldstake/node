@@ -7,13 +7,13 @@ $wallet = new phpFunctions_Wallet();
 // Get current price
 
 $now = time();
-$datediff = $service_end_date - $now;
-$days_remaining = round($datediff / (60 * 60 * 24));
-$service_price = ($price / $online_days) * $days_remaining;
+$difference = $now->diff($service_end_date);
+$days_remaining = $difference->d;
+$service_price = round(($price / $online_days) * $days_remaining);
 
-echo $price . '--';
+printr ($price);
 echo $online_days . '--';
-echo $datediff . '--';
+echo $$difference . '--';
 echo $days_remaining . '--';
 echo $service_price;
 
