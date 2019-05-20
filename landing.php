@@ -53,7 +53,7 @@
     $serv=$_SESSION['Days_Online'].$service_desc;
 
     // Create invoice
-    $inv = $wallet->CreateInvoice($OrderID,$_SESSION['Price'],$serv);
+    $inv = $wallet->CreateInvoice($OrderID,$_SESSION['Price'],$serv,$redirectURL);
     $invoiceId= $inv['invoice_id'];
     $invoiceURL= $inv['invoice_url'];
 

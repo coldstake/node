@@ -91,7 +91,7 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
         return $result;
       }
       
-      public function CreateInvoice($OrderID,$Price,$Description) {
+      public function CreateInvoice($OrderID,$Price,$Description,$redirectURL) {
         require ('/var/secure/keys.php'); //secured location - sensitive keys
         require ('vendor/autoload.php'); //loads the btcpayserver library
       
