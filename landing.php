@@ -50,7 +50,7 @@
     $_SESSION['OrderID']=$OrderID;
 
     // Create invoice
-    $inv = $wallet->CreateInvoice($OrderID);
+    $inv = $wallet->CreateInvoice($OrderID,$_SESSION['Price'],$service_desc);
     $invoiceId= $inv['invoice_id'];
     $invoiceURL= $inv['invoice_url'];
 

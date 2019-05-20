@@ -91,9 +91,8 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
         return $result;
       }
       
-      public function CreateInvoice($OrderID) {
+      public function CreateInvoice($OrderID,$Price,$Description) {
         require ('/var/secure/keys.php'); //secured location - sensitive keys
-        require ('include/config.php'); // coin configuration
         require ('vendor/autoload.php'); //loads the btcpayserver library
       
         $storageEngine = new \BTCPayServer\Storage\EncryptedFilesystemStorage($encryt_pass);
@@ -126,8 +125,8 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
         $item = new \BTCPayServer\Item();
         $item
         //    ->setCode('skuNumber')
-            ->setDescription($service_desc)
-            ->setPrice($price );
+            ->setDescription($Description)
+            ->setPrice($Price);
         $invoice->setItem($item);
       
         // Setting this to one of the supported currencies will create an invoice using

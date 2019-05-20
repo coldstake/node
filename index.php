@@ -1,23 +1,25 @@
 <?php 
+session_start(); 
 require ('/var/secure/keys.php');
 require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
-// Get current price
+// Set  price
 
-//$now = time();
 $now = new DateTime();
 $end_date = new DateTime(date($service_end_date));
 $difference = $now->diff($end_date);
 $days_remaining = $difference->d;
-$service_price = round(($price / $online_days) * $days_remaining);
+$service_price = roundup(($price / $online_days) * $days_remaining);
 
 print_r ($difference);
-echo $price . '--';
+echo '<br>' . $price . '--';
 echo $online_days . '--';
 echo $days_remaining . '--';
 echo $service_price;
+
+$_SESSION['Price']=$service_price;
 
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
