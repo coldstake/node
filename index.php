@@ -13,11 +13,15 @@ $difference = $now->diff($end_date);
 $days_remaining = $difference->d;
 $service_price = ceil(($price / $online_days) * $days_remaining);
 
+print_r ($now);
+echo '<br>';
+print_r ($end_date);
+echo '<br>';
 print_r ($difference);
-echo '<br>' . $price . '--';
-echo $online_days . '--';
-echo $days_remaining . '--';
-echo $service_price;
+echo '<br>';
+echo '<br>' . $price;
+echo '<br>' . $online_days;
+echo '<br>' . $days_remaining;
 
 $_SESSION['Price']=$service_price;
 
@@ -105,7 +109,7 @@ EOD;
 
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-shopping-cart" value="$15 - Pay Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="$$_SESSION['Price'] - Pay Now" />
 					</form>
 
 					</section>
