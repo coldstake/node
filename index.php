@@ -81,7 +81,7 @@ EOD;
 										<ul>
 											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
-											<li><a href="about.html">About</a></li>
+											<li><a href="about.html">FAQ</a></li>
 										</ul>
 									</div>
 								</li>
