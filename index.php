@@ -84,14 +84,14 @@ EOD;
 							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>COLDSTAKE.CO.IN</h2>
 							<p>The trusted home of <br />
 							cold staking<br /></p>
-							<form method="post" action="landing.php">
-            					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-				    			<ul class="actions">				
-                			    	<input type="submit" value="$15 - Pay Now !" />
-               					</ul>
-							</form>
 						</div>
-				</section>
+					</section>
+
+					<form method="post" action="landing.php">
+            					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+								<input type="submit" class="button icon fa-bitcoin" value="$15 - Pay Now" />
+					</form>
+
 				<!-- One -->
 				<section id="one" class="wrapper style1 special">
 						<div class="inner">

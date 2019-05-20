@@ -23,13 +23,10 @@
                     $verified=true;
             } else {
                     $verified=false;
-                    die ('Verification failed it looks like you are a bot, please retry!');
+                    die (' Something went wrong! - please try again.');
             }
         } else { // there is an error /
-            echo '<pre>';
-            print_r($recaptcha);
-            echo '</pre>';
-            exit;
+            die (' Something went wrong! - please try again.');
         }
     }
 
