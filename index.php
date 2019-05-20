@@ -73,7 +73,6 @@ EOD;
 			<div id="page-wrapper">
 			<!-- Header -->
 					<header id="header" class="alt">
-					<?php print $message;?>
 						<h1><a href="index.php">COLDSTAKE.CO.IN</a></h1>
 						<nav id="nav">
 							<ul>
@@ -81,6 +80,7 @@ EOD;
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
+											<li><?php print $message;?></li>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">About</a></li>
 										</ul>

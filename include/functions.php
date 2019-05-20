@@ -118,24 +118,26 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
         //$buyer->setEmail($email);
       
         // Add the buyers info to invoice
-        $invoice->setBuyer($buyer);
+        $invoice
+            ->setBuyer($buyer);
       
         // Item is used to keep track of a few things
         $item = new \BTCPayServer\Item();
         $item
-        //    ->setCode('skuNumber')
+            //->setCode('skuNumber')
             ->setDescription($Description)
             ->setPrice($Price);
         $invoice->setItem($item);
       
         // Setting this to one of the supported currencies will create an invoice using
         // the exchange rate for that currency.
-        $invoice->setCurrency(new \BTCPayServer\Currency('USD'));
+        $invoice
+            ->setCurrency(new \BTCPayServer\Currency('USD'));
       
         // Configure the rest of the invoice
         $invoice
-            ->setOrderId($OrderID)
             //->setNotificationUrl('https://store.example.com/btcpayserver/callback')
+            ->setOrderId($OrderID)
             ->setRedirectURL($redirectURL);
       
         // Updates invoice with new information such as the invoice id and the URL where
