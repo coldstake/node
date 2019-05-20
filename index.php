@@ -93,16 +93,13 @@ EOD;
 				<section id="banner">
 						<div class="inner">
 							<h2><img src="images/logo_transparent.png" alt="" width="150"/> <br/>COLDSTAKE.CO.IN</h2>
-							<p>The trusted home of <br />
-							cold staking<br /></p>
+							<p>The home of cold staking<br /></p>
 						</div>
 					<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> - Pay Now" />
 					</form>
-					<br />
 					<a href="#main" class="more scrolly"><b>LEARN MORE</b></a>
-		
 				</section>
 				<!-- One -->
 				<section id="one" class="wrapper style1 special">
