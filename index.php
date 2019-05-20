@@ -36,7 +36,7 @@ $get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_p
 
 if ($get_stakinginfo['staking']>0) {
 $message = <<<EOD
-<li class="icon fa-circle" style='color:green'>Staking online</li>
+<li><a href="#"class="icon fa-circle" style='color:green'>Staking online</a></li>
 EOD;
 } else {
 $message = <<<EOD
