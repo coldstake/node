@@ -115,8 +115,7 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
         // * the InvoiceInterface for methods that you can use.
         $invoice = new \BTCPayServer\Invoice();
         $buyer = new \BTCPayServer\Buyer();
-        $buyer
-        ->setEmail($email);
+        //$buyer->setEmail($email);
       
         // Add the buyers info to invoice
         $invoice->setBuyer($buyer);
