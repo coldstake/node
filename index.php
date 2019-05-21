@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 require ('/var/secure/keys.php');
-require_once ('include/config.php');
+require ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
@@ -20,7 +20,7 @@ if ($_SESSION['Price']>$price) {
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
 
 if ( $check_server == '' || empty($check_server) ) {
-	die (' The coind server located at '. $scheme.'://'.$server_port.' on Port:['.$server_port.'] appears to be unresponsive.');
+	die (' The server appears to be unresponsive.');
 }
 
 if ( $check_server == '' || empty($check_server) ) {

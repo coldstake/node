@@ -6,9 +6,12 @@ $wallet = new phpFunctions_Wallet();
 
 if ( $_SESSION['Address'] == '' || empty($_SESSION['Address']) || 
 	 $_SESSION['OrderID'] == '' || empty($_SESSION['OrderID']) || 
+	 $_SESSION['Price'] == '' || empty($_SESSION['Price']) || 
+	 $_SESSION['Days_Online'] == '' || empty($_SESSION['Days_Online']) || 
 	 $_SESSION['InvoiceID'] == '' || empty($_SESSION['InvoiceID']) ) {
 	die (' The session has expired - please try again.');
 }
+
 
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
@@ -19,7 +22,7 @@ if ( $check_server == '' || empty($check_server) ) {
 
 if ( $check_server == '' || empty($check_server) ) {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='font-size:16px;color:red'>Node is offline</label></ul>
+	<li><a href=""class="icon fa-circle" style='color:red'>Node offline</a></li>
 EOD;
 } else {
 
@@ -28,19 +31,16 @@ $get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_p
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	}
 
-if ($get_stakinginfo['enabled']>0) {
+if ($get_stakinginfo['staking']>0) {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='font-size:16px;color:green'> Staking is online</label></ul>
+<li><a href=""class="icon fa-circle" style='color:green'>Staking online</a></li>
 EOD;
 } else {
 $message = <<<EOD
-<ul class="icons"><label class="icon fa-circle" style='font-size:16px;color:red'> Staking is offline</label></ul>
+<li><a href=""class="icon fa-circle" style='color:red'>Staking offline</a></li>
 EOD;
 }
 }
-
-// Retrieve from Session variable 
-$address =  $_SESSION['Address'];
 
 //Check if invoice paid
 $OrderPaid = $wallet->GetInvoiceStatus ($_SESSION['InvoiceID'],$_SESSION['OrderID']);
@@ -90,7 +90,7 @@ if ( $OrderPaid == 'FAIL' ) {
 								<div class="inner">
 								<h3>ORDER #<?php print $_SESSION['OrderID'];?></h3>
 								<p>Thank you for your payment - before you get started, open your local wallet and ensure it's fully synced.</p><br>
-								<p>Here is your unique cold staking address please enter in your local wallet when prompted: <pre><code><?php print $address; ?></code></pre></p>
+								<p>Here is your unique cold staking address please enter in your local wallet when prompted: <pre><code><?php print $_SESSION['Address']; ?></code></pre></p>
 								</div>
 							</section>
 					</article>
