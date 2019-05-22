@@ -23,10 +23,10 @@
                     $verified=true;
             } else {
                     $verified=false;
-                    die (' Something went wrong! - please try again.');
+                    die (' Your captcha score was too low! - please try again.');
             }
         } else { // there is an error /
-            die (' Something went wrong! - please try again.');
+            die (' There was an error with captcha! - please try again.');
         }
     }
 
@@ -34,7 +34,7 @@
     $check_server = $wallet->ping($scheme, $server_ip, $server_port);
 
     if ( $check_server == '' || empty($check_server) ) {
-	    die (' The coind server located at '. $scheme.'://'.$server_port.' on Port:['.$server_port.'] appears to be unresponsive.');
+        die (' The server appears to be unresponsive.');
     }
 
     // Grab the next unused address 
