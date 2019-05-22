@@ -46,7 +46,8 @@
     }
 
     // Generate & store the InvoiceID in session
-    $OrderID = $ticker . '-' . $address;
+    //$OrderID = $ticker . '-' . $address;
+    $OrderID = $ticker . '-' . $wallet->crypto_rand(100000000000,999999999999);
     $_SESSION['OrderID']=$OrderID;
     
     // Full service description
