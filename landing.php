@@ -51,7 +51,7 @@
     $_SESSION['OrderID']=$OrderID;
     
     // Full service description
-    $serv=$_SESSION['Days_Online'].' '.$service_desc. ' ' . $end_date->format('Y-m-d');
+    $serv=$_SESSION['Days_Online'].' '.$service_desc. ' ' . $_SESSION['End_Date']->format('Y-m-d');
     
     // Create invoice
     $inv = $wallet->CreateInvoice($OrderID,$_SESSION['Price'],$serv,$redirectURL);

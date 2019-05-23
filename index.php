@@ -7,8 +7,8 @@ $wallet = new phpFunctions_Wallet();
 
 // Set  price and work out how long the server will run for
 $now = new DateTime();
-$end_date = new DateTime(date($service_end_date));
-$difference = $now->diff($end_date);
+$_SESSION['End_Date'] = new DateTime(date($service_end_date));
+$difference = $now->diff($_SESSION['End_Date']);
 $days_remaining = ceil($difference->format("%a"));
 $_SESSION['Days_Online']=$days_remaining;
 $_SESSION['Price'] = ceil(($price / $online_days) * $days_remaining);
@@ -100,7 +100,7 @@ EOD;
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> Pay Now" />
 						</form>
-						<h6></h6><i><?php print $_SESSION['Days_Online'].' '.$service_desc. ' ' . $end_date->format('Y-m-d');?></i>
+						<h6></h6><i><?php print $_SESSION['Days_Online'].' '.$service_desc. ' ' . $_SESSION['End_Date']->format('Y-m-d');?></i>
 						<a href="#main" class="more scrolly"></a>
 				</section>
 		<!-- Main -->
