@@ -13,12 +13,8 @@ if (isset($_POST['address'])) {
 	} else {
 //		print_r($get_balances);
 
-function add($var)
-{
-    return $var == $_POST['address'];
-}
+print_r ($get_balances[0][$address]);
 
-print_r(array_filter($get_balances, "add"));
 	}
 }
 
