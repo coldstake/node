@@ -104,9 +104,7 @@ EOD;
 								</div>
 								<form method="post" action="">
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
 												<input type="text" name="address" id="address" value="" placeholder="Private address:" />
-											</div>
 												<ul class="actions">
 													<li><input type="submit" value="Search" class="primary" /></li>
 												</ul>
