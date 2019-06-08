@@ -23,7 +23,7 @@ if (isset($_POST['address'])) {
 		print_r($e); 
 		print_r($f);
 		echo "<br />";
-	}}
+	}}}
 	}
 //print_r ($get_balances[0][$address]);
 
