@@ -30,7 +30,7 @@ if (isset($_POST['address'])) {
 	} else {
 		//print_r($get_balances);
 
-$bal=search($get_balances,$address,"");
+$bal=search($get_balances,"",$address);
 echo "<h2>Balance: $bal</h2>";
 //		$i = 0;
 //		foreach ($get_balances as $each_member) { 
