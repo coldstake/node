@@ -16,7 +16,7 @@ if (isset($_POST['address'])) {
 	foreach($get_balances as $key => $value){
 		foreach($value as $a => $b){
 //			foreach($b as $c => $d){
-				echo array_search($address,$b);
+				echo array_filter($address,$b);
 				echo "<br />";
 			//}
 		}
