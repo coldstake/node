@@ -18,9 +18,10 @@ if (isset($_POST['address'])) {
 //		print_r($value);
 	foreach($value as $a => $b){
 		foreach($b as $c => $d){
+			foreach($d as $e => $f){
 
-//		print_r($c); 
-		print_r($d);
+		print_r($e); 
+		print_r($f);
 		echo "<br />";
 	}}
 	}
