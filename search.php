@@ -14,7 +14,8 @@ if (isset($_POST['address'])) {
 //	print_r($get_balances);
 
 	foreach($get_balances as $key => $value){
-		print_r($key . " : " . $value . "<br />");
+		print_r($key); 
+		print_r($value);
 	}
 
 //print_r ($get_balances[0][$address]);
