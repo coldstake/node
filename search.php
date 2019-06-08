@@ -13,7 +13,8 @@ if (isset($_POST['address'])) {
 	} else {
 		//print_r($get_balances);
 		//echo $get_balances[$address];
-echo array_search($address, $get_balances);
+$bal=array_search($address, $get_balances);
+echo "<h2>Balance: $bal</h2>";
 //		$i = 0;
 //		foreach ($get_balances as $each_member) { 
 //			$i++; 
@@ -24,6 +25,7 @@ echo array_search($address, $get_balances);
 //				echo "<br />"; 
 //			}
 //		} 
+
 
 	}
 }
