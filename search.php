@@ -20,10 +20,9 @@ if (isset($_POST['address'])) {
 		foreach($value as $a => $b){
 		print_r($a); 
 		print_r($b);
-
 		echo "<br />";
 	}
-
+	}
 //print_r ($get_balances[0][$address]);
 
 	}
