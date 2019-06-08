@@ -13,9 +13,14 @@ if (isset($_POST['address'])) {
 	} else {
 		//print_r($get_balances);
 		//echo $get_balances[$address];
-		foreach( $get_balances as $key => $value ){
-			echo '<h4>'.$key.' - '.$value.'</h4>';
-		}
+		
+		foreach ($get_balances as $each_member) { 
+			$i++; 
+			echo "<h2>Member $i</h2>"; 
+			while (list($key, $value) = each ($each_member)) {                                 
+				echo "$key: $value<br />"; 
+			}
+		} 
 
 	}
 
