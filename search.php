@@ -4,6 +4,8 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
+var_dump ($_POST);
+
 if (isset($_POST['submit'])) {
     $address = $_POST['address'];
 
