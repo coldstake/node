@@ -11,8 +11,12 @@ if (isset($_POST['address'])) {
 	if ( !is_array($get_balances) ) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
-		print_r($get_balances);
+		//print_r($get_balances);
 		//echo $get_balances[$address];
+		foreach( $get_balances as $key => $value ){
+			echo '<h4>'.$key.' - '.$value.'</h4>';
+		}
+
 	}
 
 }
