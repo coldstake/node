@@ -4,9 +4,7 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
-var_dump ($_POST);
-
-if (isset($_POST['submit'])) {
+if (isset($_POST['address'])) {
     $address = $_POST['address'];
 
 	$get_balances = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'listaddressgroupings') ;
