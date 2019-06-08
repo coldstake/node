@@ -18,7 +18,7 @@ if (isset($_POST['address'])) {
 //		print_r($value);
 
 		foreach($value as $a => $b){
-		print_r($a); 
+//		print_r($a); 
 		print_r($b);
 		echo "<br />";
 	}
