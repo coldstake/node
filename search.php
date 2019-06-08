@@ -11,9 +11,8 @@ if (isset($_POST['address'])) {
 	if ( !is_array($get_balances) ) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
-		print_r($get_balances);
-		$bal=in_array ($address,$get_balances);
-		echo "<h2>Balance: $bal</h2>";
+//		print_r($get_balances);
+		echo array_filter($$get_balances, $address);
 	}
 }
 
