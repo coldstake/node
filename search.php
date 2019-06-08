@@ -18,7 +18,7 @@ if (isset($_POST['address'])) {
 //			foreach($b as $c => $d){
 				echo array_search($address,$b);
 				echo "<br />";
-			}
+			//}
 		}
 	}
 }}
