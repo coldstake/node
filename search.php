@@ -11,9 +11,9 @@ if (isset($_POST['address'])) {
 	if ( !is_array($get_balances) ) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
-//		print_r($get_balances);
+	var_dump($get_balances);
 
-print_r ($get_balances[0][$address]);
+//print_r ($get_balances[0][$address]);
 
 	}
 }
