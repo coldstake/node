@@ -12,7 +12,7 @@ if (isset($_POST['address'])) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
 		print_r($get_balances);
-		$bal=array_search($address,$get_balances);
+		$bal=in_array ($address,$get_balances);
 		echo "<h2>Balance: $bal</h2>";
 	}
 }
