@@ -4,6 +4,23 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
+function search($array, $key, $value)
+{
+	$results = array();
+
+	if (is_array($array))
+	{
+		if (isset($array[$key]) && $array[$key] == $value)
+			$results[] = $array;
+
+		foreach ($array as $subarray)
+			$results = array_merge($results, search($subarray, $key, $value));
+	}
+
+	return $results;
+} 
+
+
 if (isset($_POST['address'])) {
     $address = $_POST['address'];
 
@@ -12,8 +29,8 @@ if (isset($_POST['address'])) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
 		//print_r($get_balances);
-		//echo $get_balances[$address];
-$bal=array_search($address, $get_balances);
+
+$bal=search($get_balances,$address,"");
 echo "<h2>Balance: $bal</h2>";
 //		$i = 0;
 //		foreach ($get_balances as $each_member) { 
