@@ -15,7 +15,12 @@ if (isset($_POST['address'])) {
 
 	foreach($get_balances as $key => $value){
 //		print_r($key); 
-		print_r($value);
+//		print_r($value);
+
+		foreach($value as $a => $b){
+		print_r($a); 
+		print_r($b);
+
 		echo "<br />";
 	}
 
