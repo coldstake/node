@@ -12,7 +12,13 @@ if (isset($_POST['address'])) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
 //		print_r($get_balances);
-		print_r(array_filter($get_balances, $address));
+
+function add($var)
+{
+    return $var == $_POST['address'];
+}
+
+print_r(array_filter($get_balances, "add"));
 	}
 }
 
