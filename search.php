@@ -14,17 +14,14 @@ if (isset($_POST['address'])) {
 //	print_r($get_balances);
 
 	foreach($get_balances as $key => $value){
-//		print_r($key); 
-//		print_r($value);
-	foreach($value as $a => $b){
-		foreach($b as $c => $d){
-		echo array_filter($d($address));
-		echo "<br />";
-	}}
+		foreach($value as $a => $b){
+			foreach($b as $c => $d){
+				echo array_search($address,$d);
+				echo "<br />";
+			}
+		}
 	}
-
-	}
-}
+}}
 
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
