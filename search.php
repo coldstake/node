@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
 	if ( !is_array($get_balances) ) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
-
+		var_dump($get_balances);
 		echo $get_balances[$POST['address']];
 	}
 
