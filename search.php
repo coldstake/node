@@ -94,9 +94,9 @@ EOD;
 								</div>
 
 								<?php if (isset($_POST['address'])) {?>
-								<h5>Results:</h5>
+								<section>
 									<div class="table-wrapper">
-										<table>
+									<table>
 											<thead>
 												<tr>
 													<th>Address</th>
@@ -112,22 +112,16 @@ EOD;
 											<tfoot>
 											</tfoot>
 										</table>
-
+								</section>
 								<?php } ?>
-
 								<form method="post" action="">
-									<div class="row gtr-uniform">
 										<input type="text" name="address" id="address" value="" placeholder="address" />
 										<ul class="actions">
 											<li><input type="submit" value="Search" class="primary" /></li>
 										</ul>
-									</div>
 								</form>
-
-
 							</section>
 					</article>
-
 				<!-- Footer -->
 				<footer id="footer">
 						<ul class="icons">
