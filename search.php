@@ -93,7 +93,7 @@ EOD;
 									<h3>PRIVATE ADDRESS SEARCH</h3>
 								</div>
 
-								<?php if (isset($_POST['address'])) {?>
+								<?php if ( (isset($_POST['address'])) && isset($balance) ){?>
 								<section>
 									<div class="table-wrapper">
 									<table>
@@ -113,15 +113,14 @@ EOD;
 											</tfoot>
 										</table>
 								</section>
-								<?php } ?>
+								<?php } ?> <br />
 								<form method="post" action="">
 										<input type="text" name="address" id="address" value="" placeholder="address" />
-										<ul class="actions">
-											<li><input type="submit" value="Search" class="primary" /></li>
-										</ul>
+										<input type="submit" value="Search" class="primary" />
 								</form>
 							</section>
 					</article>
+
 				<!-- Footer -->
 				<footer id="footer">
 						<ul class="icons">
