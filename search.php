@@ -17,7 +17,7 @@ if (isset($_POST['address'])) {
 		foreach($value as $a => $b){
 			foreach($b as $c => $d){
 //			echo array_search($address,$b);
-			print_r ($b['$address']>);
+			print_r ($b['$address']);
 			echo "<br />";
 //			if ($d == $address) {echo $d;}
 			}
