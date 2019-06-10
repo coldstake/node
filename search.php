@@ -90,11 +90,11 @@ EOD;
 						</header>
 							<section class="wrapper style5">
 								<div class="inner">
+								<section>
 									<h3>PRIVATE ADDRESS SEARCH</h3>
 								</div>
 								<?php if ( (isset($_POST['address'])) && isset($balance) ){?>
-								<section>
-									<div class="table-wrapper">
+								<div class="table-wrapper">
 									<table>
 											<thead>
 												<tr>
@@ -111,7 +111,6 @@ EOD;
 											<tfoot>
 											</tfoot>
 										</table>
-								</section>
 								<?php } ?> <br />
 								<form method="post" action="">
 										<div class="col-24">
@@ -125,6 +124,7 @@ EOD;
 												</ul>
 										</div>
 								</form>
+								</section>	
 							</section>
 					</article>
 
