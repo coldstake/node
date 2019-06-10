@@ -11,15 +11,9 @@ if (isset($_POST['address'])) {
 	if ( !is_array($get_balances) ) {
 		die (' There was an error with your login parameters. Are your credentials correct?');
 	} else {
-	foreach($get_balances as $key => $value){
-		foreach($value as $a => $b){
-//			foreach($b as $c => $d){
-//			print_r ($b);
-//			echo ($b[0]);
-//			echo ($b[1]);
-//			echo "<br />";
-			if ($b[0] == $address) {echo $b[1];}
-//			}
+	foreach($get_balances as $a => $b){
+		foreach($b as $c => $d){
+			if ($d[0] == $address) {$balance=$d[1];}
 		}
 	}
 }}
@@ -98,15 +92,19 @@ EOD;
 								<div class="inner">
 									<h3>PRIVATE ADDRESS SEARCH</h3>
 								</div>
+
+								<?php if (isset($_POST['address'])) {?>
+								<p> The balance for <?php echo $address;?> is: <?php echo $balance;?></p>
+								<?php } ?>
+
 								<form method="post" action="">
-										<div class="row gtr-uniform">
-												<input type="text" name="address" id="address" value="" placeholder="Private address:" />
-												<ul class="actions">
-													<li><input type="submit" value="Search" class="primary" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<div class="row gtr-uniform">
+										<input type="text" name="address" id="address" value="" placeholder="address" />
+										<ul class="actions">
+											<li><input type="submit" value="Search" class="primary" /></li>
+										</ul>
+									</div>
+								</form>
 
 
 							</section>
