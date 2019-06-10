@@ -94,7 +94,25 @@ EOD;
 								</div>
 
 								<?php if (isset($_POST['address'])) {?>
-								<p> The balance for <?php echo $address;?> is: <?php echo $balance;?></p>
+								<h5>Results:</h5>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Address</th>
+													<th>Balance</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><?php echo $address;?></td>
+													<td><?php echo $balance;?></td>
+												</tr>
+											</tbody>
+											<tfoot>
+											</tfoot>
+										</table>
+
 								<?php } ?>
 
 								<form method="post" action="">
