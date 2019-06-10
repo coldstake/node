@@ -73,7 +73,10 @@ if ( $OrderPaid == 'FAIL' ) {
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
+											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
+											<li><a href="about.html">FAQ</a></li>
+											<li><a href="search.php">Search</a></li>
 										</ul>
 									</div>
 								</li>
