@@ -92,7 +92,6 @@ EOD;
 								<div class="inner">
 									<h3>PRIVATE ADDRESS SEARCH</h3>
 								</div>
-
 								<?php if ( (isset($_POST['address'])) && isset($balance) ){?>
 								<section>
 									<div class="table-wrapper">
@@ -115,8 +114,15 @@ EOD;
 								</section>
 								<?php } ?> <br />
 								<form method="post" action="">
-										<input type="text" name="address" id="address" value="" placeholder="address" />
-										<input type="submit" value="Search" class="primary" />
+										<div class="col-12">
+											<input type="text" name="address" id="address" value="" placeholder="address" />
+											</div>
+										<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="Search" class="primary" /></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+										</div>
 								</form>
 							</section>
 					</article>
