@@ -114,9 +114,10 @@ EOD;
 								</section>
 								<?php } ?> <br />
 								<form method="post" action="">
-										<div class="col-12">
+										<div class="col-24">
 											<input type="text" name="address" id="address" value="" placeholder="address" />
-											</div>
+										</div>
+										<br />
 										<div class="col-12">
 												<ul class="actions">
 													<li><input type="submit" value="Search" class="primary" /></li>
