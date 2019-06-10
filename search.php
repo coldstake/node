@@ -19,7 +19,7 @@ if (isset($_POST['address'])) {
 //				echo array_search($address,$b);
 			echo $d;
 			echo "<br />";
-			//}
+			}
 		}
 	}
 }}
