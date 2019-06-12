@@ -75,7 +75,7 @@ EOD;
 											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">FAQ</a></li>
-											<li><a href="search.php">Address Check</a></li>
+											<li><a href="search.php">Check My Address</a></li>
 										</ul>
 									</div>
 								</li>
@@ -91,7 +91,7 @@ EOD;
 							<section class="wrapper style5">
 								<div class="inner">
 								<section>
-									<h3>Address Check</h3>
+									<h3>Check My Address</h3>
 								</div>
 								<?php if ( (isset($_POST['address'])) && isset($balance) ){?>
 								<div class="table-wrapper">

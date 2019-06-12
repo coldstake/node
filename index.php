@@ -82,7 +82,7 @@ EOD;
 											<?php print $message;?>
 											<li><a href="index.php">Home</a></li>
 											<li><a href="about.html">FAQ</a></li>
-											<li><a href="search.php">Search</a></li>
+											<li><a href="search.php">Check My Address</a></li>
 										</ul>
 									</div>
 								</li>
