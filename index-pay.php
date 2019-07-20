@@ -5,6 +5,17 @@ require ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
+// Set  price and work out how long the server will run for
+$now = new DateTime();
+$_SESSION['End_Date'] = new DateTime(date($service_end_date));
+$difference = $now->diff($_SESSION['End_Date']);
+$days_remaining = ceil($difference->format("%a"));
+$_SESSION['Days_Online']=$days_remaining;
+$_SESSION['Price'] = ceil(($price / $online_days) * $days_remaining);
+if ($_SESSION['Price']>$price) {
+	$_SESSION['Price']=$price;
+}
+
 //Check if node is online before further checks
 $check_server = $wallet->ping($scheme, $server_ip, $server_port);
 
@@ -86,14 +97,13 @@ EOD;
 							<p>The home of cold staking<br /></p>
 						</div>
 
-						<form method="post" action="activate-free.php">
+						<form method="post" action="landing.php">
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-								<input type="submit" class="button icon fa-shopping-cart" value="Cold Stake Now" />
+								<input type="submit" class="button icon fa-shopping-cart" value="$<?php print $_SESSION['Price'];?> Pay Now" />
 						</form>
-						<p><br />We have opened a crowdfund <a href="https://btcpay.trustaking.com/apps/4W7ELc7k2jXKVj4hgg7B8CYnhEwR/crowdfund">here</a> to keep the service free of charge.</p>
+						<h6></h6><i><?php print $_SESSION['Days_Online'].' '.$service_desc. ' ' . $_SESSION['End_Date']->format('Y-m-d');?></i>
 						<a href="#main" class="more scrolly"></a>
-
-					</section>
+				</section>
 		<!-- Main -->
 				<article id="main">
 				<!-- One -->
