@@ -1,4 +1,5 @@
 <?php 
+session_destroy();
 session_start(); 
 require ('/var/secure/keys.php');
 require ('include/config.php');
