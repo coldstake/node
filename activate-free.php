@@ -43,14 +43,6 @@ if ( $check_server == '' || empty($check_server) ) {
 	die (' The server appears to be unresponsive.');
 }
 
-// Grab the next unused address 
-$address = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'getnewstakeaddress') ;
-if ( $address == '' || empty($address) ) {
-   die (' Something went wrong! - please try again.');
-} else {
-   $_SESSION['Address']=$address;
-}
-
 if ( $check_server == '' || empty($check_server) ) {
 $message = <<<EOD
 	<li><a href=""class="icon fa-circle" style='color:red'>Node offline</a></li>
