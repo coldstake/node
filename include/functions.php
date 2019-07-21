@@ -177,5 +177,11 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
       
         return array('invoice_id' => $invoice->getId(), 'invoice_url' => $invoice->getUrl());
       }      
-
+      public function web_redirect($url) {
+        ob_start();
+        header('Location: '.$url);
+        ob_end_flush();
+        die();
+    }
+    
 }

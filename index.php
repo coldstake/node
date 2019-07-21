@@ -18,7 +18,17 @@ $message = <<<EOD
 EOD;
 } else {
 
-$get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'getstakinginfo') ;
+// Grab the next unused address 
+$address = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'getnewstakeaddress') ;
+if ( $address == '' || empty($address) ) {
+   die (' Something went wrong! - please try again.');
+} else {
+   $_SESSION['Address']=$address;
+}
+
+//Check staking status
+
+	$get_stakinginfo = $wallet->rpc($scheme,$server_ip,$server_port,$rpc_user,$rpc_pass,'getstakinginfo') ;
 	if ( !is_array($get_stakinginfo) ) {
 		die (' There was an error with your login parameters. Is your RPC Username and Password correct?');
 	}

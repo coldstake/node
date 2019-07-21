@@ -5,6 +5,12 @@ require_once ('include/config.php');
 require ('include/functions.php');
 $wallet = new phpFunctions_Wallet();
 
+
+// If no address then redirect to home page
+if ( $_SESSION['Address'] == '' || empty($_SESSION['Address']) ) {
+	$wallet->web_redirect ("index.php");	
+ }
+
     // Deal with the bots first
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
     
