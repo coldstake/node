@@ -111,7 +111,7 @@ EOD;
 							<section class="wrapper style5">
 								<div class="inner">
 								<h3>ACTIVATE COLD STAKING</h3>
-								<p>We want to keep this service free of charge for as long as possible, so please consider donating to our crowdfund <a href="https://btcpay.trustaking.com/apps/4W7ELc7k2jXKVj4hgg7B8CYnhEwR/crowdfund">here</a>.<br>
+								<p>We want to keep this service free of charge for as long as possible, so please consider donating to our crowdfund <a href="https://btcpay.trustaking.com/apps/4W7ELc7k2jXKVj4hgg7B8CYnhEwR/crowdfund">here</a>.<br><br>
 								Before you get started, open your local wallet and ensure it's fully synced. Here is your unique cold staking address please enter in your local wallet when prompted: </p>
 								<pre><code><?php print $_SESSION['Address']; ?></code></pre>
 								<p>For community support and platform suggestions visit our Discord channel by accepting the invite <a href="https://discord.gg/YAZC9Gj">here</a><br/></p>
