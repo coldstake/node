@@ -129,7 +129,7 @@ public function rpc($scheme,$ip,$port,$rpcuser,$rpcpass,$command,$params=null){
         
         $token = new \BTCPayServer\Token();
         $token->setToken($pair_token);
-        $token->setFacade('merchant');
+//        $token->setFacade('merchant');
         $client->setToken($token);
       
         // * This is where we will start to create an Invoice object, make sure to check

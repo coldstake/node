@@ -100,7 +100,7 @@ EOD;
             					<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 								<input type="submit" class="button icon fa-shopping-cart" value="Cold Stake Now" />
 						</form>
-						<p><br />We have opened a crowdfund <a href="https://btcpay.trustaking.com/apps/4W7ELc7k2jXKVj4hgg7B8CYnhEwR/crowdfund">here</a> to keep the service free of charge.</p>
+						<p><br />We have opened a crowdfund <a href="https://donations.coldstake.co.in">here</a> to keep the service free of charge.</p>
 						<a href="#main" class="more scrolly"></a>
 
 					</section>
